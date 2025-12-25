@@ -2,6 +2,8 @@
 
 A true autonomous browser agent that can achieve complex goals without human intervention, powered by GPT-4 and Playwright.
 
+> **Built on:** This project is an evolution of [browser_mcp_agent](https://github.com/jaskiran9941/browser_mcp_agent), transforming it from a command executor into a fully autonomous agent with planning and multi-step execution capabilities.
+
 ## What Makes This a Real Agent?
 
 Unlike simple command executors, this is a **true autonomous agent** that:
@@ -278,15 +280,47 @@ The `requirements.txt` includes:
 - `anthropic` - (Optional) For future Claude integration
 - `requests` - HTTP library
 
+## Evolution from browser_mcp_agent
+
+This autonomous agent builds upon the foundation of [browser_mcp_agent](https://github.com/jaskiran9941/browser_mcp_agent):
+
+**What Changed:**
+
+| browser_mcp_agent (Base) | browser_autonomous_agent (This Repo) |
+|--------------------------|-------------------------------------|
+| Command executor | Autonomous agent with planning loop |
+| One command = one action | One goal = multi-step execution |
+| Manual workflow control | Agent-controlled workflow |
+| No page awareness | Reads and analyzes page content |
+| No goal tracking | Knows when objectives are complete |
+
+**New Capabilities Added:**
+- 🧠 Planning loop with GPT-4 decision-making
+- 📄 Page content analysis for context-aware actions
+- 🔄 Multi-step autonomous execution (up to 15 steps)
+- ✅ Goal completion detection
+- 📊 Real-time progress tracking
+- 🔮 Auto mode: intelligent command vs goal detection
+
+**Backward Compatible:**
+- Still supports simple command mode from original repo
+- All original browser actions work the same way
+- Same thread-safe async architecture
+
 ## Future Enhancements
 
-- Add screenshot capture and display
-- Support for multiple browser tabs
-- Command history persistence
-- Visual element selection
-- Macro recording and playback
-- Integration with Claude API for improved command understanding
+- Screenshot capture and analysis
+- Vision-based element selection
+- Multi-tab workflow support
+- Persistent conversation memory across sessions
+- Learning from successful workflows
+- Integration with Claude API for improved reasoning
 
 ## License
 
 MIT
+
+## Credits
+
+Original command executor: [browser_mcp_agent](https://github.com/jaskiran9941/browser_mcp_agent)
+Autonomous agent evolution: This repository
